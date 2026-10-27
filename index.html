@@ -344,7 +344,8 @@ section.sec5{scroll-margin-top:64px;margin-bottom:56px}
 .hero5{display:grid;grid-template-columns:240px minmax(0,1fr);gap:36px;padding:28px;align-items:center}
 .hero5 h1{font:800 clamp(34px,4.6vw,54px)/1.02 var(--f-display);letter-spacing:-.015em}
 .hero5 .role{margin-top:8px;color:var(--fg-2)}
-.hero5 .thesis{margin-top:14px;font-size:18px;line-height:1.5;max-width:52ch}
+.hero5 .thesis{margin-top:14px;font-size:20px;font-weight:600;line-height:1.4;max-width:46ch;text-wrap:balance}
+.hero5 .pitch{margin-top:10px;color:var(--fg-2);font-size:15.5px;line-height:1.6;max-width:62ch}
 .hero5 .cta{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}
 .hero5 .mailline{margin-top:14px;font:500 13px var(--f-mono);color:var(--fg-2);display:flex;flex-wrap:wrap;gap:6px 16px}
 .hero5 .mailline b{color:var(--fg);font-weight:500;user-select:all}
@@ -369,10 +370,33 @@ section.sec5{scroll-margin-top:64px;margin-bottom:56px}
 /* results */
 .res5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
 .res5 div{background:var(--surface);padding:14px 16px;border-top:3px solid var(--c)}
-.res5 b{display:block;font:600 24px/1.1 var(--f-body);font-variant-numeric:tabular-nums}
+.res5 b{display:block;font:600 21px/1.15 var(--f-body);font-variant-numeric:tabular-nums}
 .res5 span{font-size:12.5px;color:var(--fg-2);line-height:1.4;display:block;margin-top:4px}
 /* case studies */
 .cases5{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;align-items:start}
+.cases5.two{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:14px}
+.feat5{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--epic);border-radius:var(--r);padding:clamp(18px,3vw,28px);display:grid;gap:16px;min-width:0}
+.feat5 .meta{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;font-size:12px;color:var(--fg-3)}
+.feat5 h3{font:800 clamp(24px,3vw,32px)/1.1 var(--f-display);letter-spacing:-.01em}
+.feat5 .lede{font-size:16px;max-width:75ch}
+.feat5 h4{margin:0 0 6px;font:600 11px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--fg-3)}
+.feat5 .cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
+.feat5 ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14.5px;color:var(--fg-2)}
+.feat5 ul b{color:var(--fg)}
+.feat5 p{font-size:14.5px;color:var(--fg-2)}
+.emap{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.emap .st{border:1px solid var(--line);border-top:3px solid var(--c);border-radius:6px;padding:10px;background:var(--surface-2);display:grid;gap:6px;align-content:start}
+.emap .st b{font-size:12.5px}
+.emap .st span{font-size:12px;color:var(--fg-2);line-height:1.35;padding:4px 6px;background:var(--surface);border:1px solid var(--line);border-radius:4px}
+.emap .st.next{border-style:dashed}
+.srcl{font-size:13px}
+.qw{display:grid;gap:12px}
+.qw .lede{font-size:15px;color:var(--fg)}
+.qw h4{margin:4px 0 0;font:600 11px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--fg-3)}
+.qw ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14px;color:var(--fg-2)}
+.qw ul b{color:var(--fg)}
+@media (max-width:1050px){.emap{grid-template-columns:repeat(2,minmax(0,1fr))}.cases5.two{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:640px){.feat5 .cols{grid-template-columns:minmax(0,1fr)}.emap{grid-template-columns:minmax(0,1fr)}}
 .wi5{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--c);border-radius:var(--r);padding:16px;display:grid;gap:10px;min-width:0}
 .wi5 .meta{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--fg-3)}
 .wi5 .meta .done{margin-left:auto}
@@ -493,13 +517,14 @@ details.more[open] summary::before{transform:rotate(90deg)}
         <span class="flip-hint">drag or tap to turn ↻</span>
       </div>
       <div>
-        <div class="eyebrow">Business Analyst</div>
+        <div class="eyebrow">Business Analyst · GS1 UK QR codes · Azure DevOps</div>
         <h1 style="margin-top:6px">Pravalika Ananthula</h1>
-        <p class="role">Agile BA at QWARE · Newcastle upon Tyne, UK · MSc, Northumbria University</p>
-        <p class="thesis">I turn changing client needs into user stories developers can build, and estimates managers can trust.</p>
+        <p class="role">Business Analyst · Newcastle upon Tyne · MSc, Northumbria University</p>
+        <p class="thesis">I don’t just define requirements. I challenge assumptions, solve business problems and turn complexity into clarity, so the right solutions get built for the right reasons.</p>
+        <p class="pitch">As the Business Analyst on the project, I took GS1 UK’s QR code generator from sign-off to <b>go-live in July 2026</b>, opening next-generation QR codes up to GS1 UK’s community of <b>60,000+ organisations</b>.</p>
         <div class="cta"><a class="btn primary cvbtn" href="Pravalika_Ananthula_CV.pdf" target="_blank" rel="noopener">Download CV</a><button class="btn" data-copy>Copy email</button><a class="btn" href="https://www.linkedin.com/in/pravalika-ananthula" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="#work">See case studies ↓</a></div>
         <div class="mailline"><span>Email <b>prav.ananthula@gmail.com</b></span><span>Open to roles across the UK</span></div>
-        <div class="facts5 chips"><span class="chip">Azure DevOps</span><span class="chip">Power BI</span><span class="chip">SQL</span><span class="chip">Oracle</span><span class="chip">Excel</span><span class="chip">Power Apps</span><span class="chip">BPMN 2.0</span><span class="chip">Microsoft 365</span></div>
+        <div class="facts5 chips"><span class="chip">Azure DevOps</span><span class="chip">Microsoft Dynamics 365</span><span class="chip">Power BI</span><span class="chip">SQL</span><span class="chip">Oracle</span><span class="chip">Excel</span><span class="chip">Power Apps</span><span class="chip">BPMN 2.0</span><span class="chip">Microsoft 365</span></div>
       </div>
     </div>
   </section>
@@ -507,23 +532,45 @@ details.more[open] summary::before{transform:rotate(90deg)}
   <!-- RESULTS -->
   <section class="sec5" id="results" style="margin-top:-36px">
     <div class="res5">
-      <div style="--c:var(--bug)"><b>3 blockers</b><span>found before build on a “1-point” story</span></div>
-      <div style="--c:var(--epic)"><b>S · M · L · XL</b><span>led T-shirt sizing of 11 epics into an agreed build order</span></div>
-      <div style="--c:var(--story)"><b>1.5d → 2 pts</b><span>clean re-estimate when the client changed course</span></div>
-      <div style="--c:var(--ok)"><b>3,000</b><span>students across 15 schools in my volunteer programme</span></div>
-      <div style="--c:var(--accent)"><b>AI-900</b><span>Microsoft Certified: Azure AI Fundamentals</span></div>
+      <div style="--c:var(--accent)"><b>Sign-off → go-live</b><span>Business Analyst on GS1 UK’s QR codes</span></div>
+      <div style="--c:var(--ok)"><b>Live July 2026</b><span>QR code generator in My Numberbank</span></div>
+      <div style="--c:var(--epic)"><b>12+ epics</b><span>shaped, sized and sequenced into one delivery plan</span></div>
+      <div style="--c:var(--story)"><b>60,000+</b><span>organisations in GS1 UK’s community</span></div>
+      <div style="--c:var(--bug)"><b>3,000 students</b><span>volunteer programme across 15 schools</span></div>
     </div>
   </section>
 
   <!-- CASE STUDIES -->
   <section class="sec5" id="work">
-    <div class="sh"><h2><small>BOARD</small>Case studies</h2><p>Three real problems from my BA work at QWARE. Client details changed; the decisions are mine.</p></div>
-    <div class="cases5"><article class="wi5" id="cs1873" style="--c:var(--story)">
+    <div class="sh"><h2><small>BOARD</small>Case studies</h2><p>A programme I helped deliver at QWARE, and two moments from inside it.</p></div>
+    <article class="feat5" id="gs1">
+ <div class="meta"><span class="wit" style="--c:var(--epic)"><i></i>Epic · Programme</span><span class="state done" style="--c:var(--ok)"><i></i>Live July 2026</span><span>GS1 UK · My Numberbank</span></div>
+ <h3>Taking GS1 UK from barcodes to QR codes</h3>
+ <p class="lede">GS1 UK, the organisation behind the barcodes on UK products, needed its community of 60,000+ organisations to create QR codes powered by GS1, so one scan links a product to rich online information. It had to be built into the existing My Numberbank platform, keep the identifiers brands already use, and support a phased move: barcode, then barcode plus QR, then QR only.</p>
+ <div class="cols">
+  <div><h4>My role</h4><p>Business Analyst from sign-off to go-live: the link between GS1’s product owner and a team of developers, architects and a tester.</p></div>
+  <div><h4>The outcome</h4><ul><li><b>Live in July 2026:</b> a self-serve QR code generator, included in GS1 UK membership.</li><li><b>Shoppers who scan</b> land on a consumer landing page with the product’s information.</li><li><b>Security-tested before launch</b> through a dedicated penetration-testing epic.</li><li><b>Next roadmap already shaped</b> before go-live, so GS1 could keep improving without a gap.</li></ul></div>
+ </div>
+ <div><h4>What I shaped: the epic map</h4>
+  <div class="emap">
+   <div class="st" style="--c:var(--story)"><b>Foundation &amp; security</b><span>QR code architecture</span><span>QR code foundation</span><span>Saving QR code data</span><span>System settings</span><span>Penetration testing</span></div>
+   <div class="st" style="--c:var(--epic)"><b>Creating QR codes</b><span>Product QR image generation</span><span>QR code design</span><span>Subdomain management</span><span>Redirect link management</span></div>
+   <div class="st" style="--c:var(--ok)"><b>Shopper experience</b><span>Consumer landing page</span></div>
+   <div class="st" style="--c:var(--feature)"><b>Commercial &amp; insight</b><span>Subscriptions</span><span>QR code reporting</span></div>
+   <div class="st next" style="--c:var(--new)"><b>Next on the roadmap</b><span>Allergen information</span><span>Filter attributes by use case</span><span>Central product image storage</span><span>Member QR promotion</span><span>In-screen data validation</span><span>System tooling</span></div>
+  </div>
+  <p class="small muted" style="margin-top:8px">Each epic T-shirt sized, sequenced and broken into features and user stories with acceptance criteria.</p>
+ </div>
+ <div class="cols">
+  <div><h4>Under pressure</h4><p>Designs arrived late, and at times as AI-generated mock-ups with buttons that only looked real. I checked the intended behaviour of every screen with GS1’s product owner before build, and routed every change request through one place, so the team kept delivering every 2–3 weeks.</p></div>
+  <div><h4>Lesson</h4><p class="lesson5" style="--c:var(--epic)">A big programme is just clear epics, honest sizing and fast answers for the team.</p><p class="srcl" style="margin-top:10px"><a href="https://www.gs1uk.org/insights/news/Retail-barcode-revolution-moves-into-next-phase-as-GS1-UK-puts-next-generation-QR-creation-directly-in-brands-hands" target="_blank" rel="noopener">See GS1 UK’s launch announcement ↗</a></p></div>
+ </div>
+</article>
+    <div class="cases5 two"><article class="wi5" id="cs1873" style="--c:var(--story)">
  <div class="meta"><span class="wit" style="--c:var(--story)"><i></i>User Story</span><span class="mono">#1873</span><span class="state done" style="--c:var(--ok)"><i></i>Done</span></div>
- <h3>The requirement that changed mid-refinement</h3><div class="big">1.5d → 2 pts</div>
- <div><h4>Problem</h4><p>Members were entering their main website instead of a sub-domain. The client asked for a warning, then changed course during refinement and decided to enforce the prefix.</p></div>
- <div><h4>What I did</h4><ul><li>Split one broad ticket into a UX story and a reporting story</li><li>Audited every line of the brief against both stories</li><li>Explained the change as “a spellcheck squiggle versus autocomplete” so everyone could follow</li><li>Logged a change request and re-estimated with the developers</li></ul></div>
- <div class="out"><b>Outcome:</b> Re-estimated cleanly from 1.5 dev days to 2 points; the client confirmed the split worked.</div>
+ <h3>The requirement that changed</h3><div class="big">1.5d → 2 pts</div>
+ <div class="out"><b>Outcome:</b> A mid-refinement change from “warn users” to “enforce it”, handled with a clean re-estimate (1.5 dev days → 2 points) and client sign-off, with nothing from the brief lost.</div>
+ <div><h4>How</h4><ul><li>Split one broad ticket into a UX story and a reporting story</li><li>Audited every line of the brief against both stories</li><li>Explained the change as “a spellcheck squiggle versus autocomplete”, so non-technical stakeholders agreed quickly</li></ul></div>
  <p class="lesson5">A good analogy is a requirements tool.</p>
  <details class="more"><summary>Show artefacts</summary><div class="more-body"><div class="journey" id="journey"></div><div class="art-in"><h5>US-A · acceptance criteria</h5><span class="dummy">Sample data · client details changed</span><div class="gherkin"><b>Given</b> I am on the Domain set-up page
 <b>When</b>  I enter "brightlane.co.uk"
@@ -533,20 +580,10 @@ details.more[open] summary::before{transform:rotate(90deg)}
 </article><article class="wi5" id="cs1911" style="--c:var(--warn)">
  <div class="meta"><span class="wit" style="--c:var(--warn)"><i></i>User Story</span><span class="mono">#1911</span><span class="state done" style="--c:var(--ok)"><i></i>Done</span></div>
  <h3>The story that looked like 1 point</h3><div class="big">3 blockers</div>
- <div><h4>Problem</h4><p>Point a test environment at a new generator service and add one export format. It looked trivial, but the copy, the scope and the release route were all unclear.</p></div>
- <div><h4>What I did</h4><ul><li>Treated each gap as an unresolved requirement, not a developer problem</li><li>Logged “agree the deployment route first” for the dev lead</li><li>Took copy and scope questions to the product owner</li><li>Kept the story lean: user story, short note, acceptance criteria</li></ul></div>
- <div class="out"><b>Outcome:</b> Estimate held at a provisional 1 point, with three blockers surfaced before build.</div>
+ <div class="out"><b>Outcome:</b> Three blockers caught before a single line of code, so nothing shipped early or blocked other releases.</div>
+ <div><h4>How</h4><ul><li>Treated each gap as a missing requirement, not a developer problem</li><li>Took scope and wording questions to the product owner, and the release-route question to the dev lead</li><li>Held the estimate as provisional until all three were answered</li></ul></div>
  <p class="lesson5">A small estimate is only as good as the questions asked before it.</p>
  <details class="more"><summary>Show artefacts</summary><div class="more-body"><div class="art-in"><h5>Open items log</h5><span class="dummy">Sample data · client details changed</span><div class="tbl-wrap"><table><thead><tr><th>#</th><th>Open item</th><th>Owner</th></tr></thead><tbody><tr><td class="mono">OI-1</td><td>Tooltip wording for the new format</td><td>Product owner</td></tr><tr><td class="mono">OI-2</td><td>Replace all formats, or only the new one?</td><td>Product owner</td></tr><tr><td class="mono">OI-3</td><td>Agree the deployment route first</td><td>Dev lead</td></tr></tbody></table></div></div></div></details>
-</article><article class="wi5" id="cs1802" style="--c:var(--epic)">
- <div class="meta"><span class="wit" style="--c:var(--epic)"><i></i>Epic</span><span class="mono">#1802</span><span class="state done" style="--c:var(--ok)"><i></i>Done</span></div>
- <h3>Planning a new internal product: 11 epics, one delivery plan</h3><div class="big">S · M · L · XL</div>
- <div><h4>Problem</h4><p>Our team was building a new internal product with 11 epics, very little detail and no tech lead available. Management wanted user stories quickly.</p></div>
- <div><h4>What I did</h4><ul><li>Set up all 11 epics in Azure DevOps and ran structured refinement sessions</li><li>Wrote first-draft stories from developer notes, clearly tagged “draft, pending validation”</li><li>Led an epic review with the team: sized each epic (S, M, L, XL) and agreed the build order</li><li>Tracked 16 set-up tickets on one page, with what was blocking each one</li></ul></div>
- <div class="out"><b>Outcome:</b> A sized, agreed delivery plan: shared foundation first, four epics in parallel, the largest last. Overlapping epics were merged, so nothing was built twice. Half the set-up tickets were ready for testing; the rest each had a named next step.</div>
- <p class="lesson5">When detail is missing, structure is the deliverable.</p>
- <details class="more"><summary>Show artefacts</summary><div class="more-body"><div class="art-in"><h5>Agreed delivery order</h5><span class="dummy">Sample data · client details changed</span><div class="flow"><div class="fnode found"><b>Foundation</b><span class="size">M</span></div><div class="arrow">→</div><div class="par"><div class="fnode">Records <span class="size">S</span></div><div class="fnode">Notifications <span class="size">S</span></div><div class="fnode">Reporting <span class="size">M</span></div><div class="fnode">Admin <span class="size">M</span></div></div><div class="arrow">→</div><div class="fnode big"><b>Workflow</b><span class="size">XL</span></div></div></div>
-<div class="art-in"><h5>Set-up tickets: ready vs blocked</h5><div class="stack"><div style="flex:8;background:var(--ok)">8 ready for testing</div><div style="flex:8;background:var(--bad)">8 waiting on designs or data</div></div></div></div></details>
 </article></div>
   </section>
 
@@ -574,13 +611,28 @@ details.more[open] summary::before{transform:rotate(90deg)}
   <!-- EXPERIENCE -->
   <section class="sec5" id="experience">
     <div class="sh"><h2><small>SPRINTS</small>Experience</h2><p>Newest first.</p></div>
-    <div class="iters"><article class="iter"><aside><span class="eyebrow">Iteration</span><span class="dates">Jun 2025 – Present</span><span class="cur">Current</span><span class="small muted">Newcastle upon Tyne</span></aside><div class="ib"><div><h3>Business Analyst</h3><div class="org">QWARE</div></div><ul class="tasks"><li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3 3 7-7"/></svg><span>Gather and analyse changing client requirements; write epics, features and user stories with acceptance criteria in Azure DevOps</span></li><li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3 3 7-7"/></svg><span>Facilitate stand-ups, sprint planning, refinement and retrospectives</span></li><li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3 3 7-7"/></svg><span>Lead estimation and costing sessions with developers</span></li><li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3 3 7-7"/></svg><span>Own the dashboards stakeholders use to track delivery</span></li></ul></div></article><article class="iter"><aside><span class="eyebrow">Iteration</span><span class="dates">Feb 2023 – Feb 2025</span><span class="small muted">Remote, part-time</span></aside><div class="ib"><div><h3>Junior Business Analyst</h3><div class="org">Indian Institute of Hotel Management &amp; Culinary Arts</div></div><ul class="tasks"><li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3 3 7-7"/></svg><span>Analysed admissions and student data to inform admissions and student-services decisions</span></li><li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3 3 7-7"/></svg><span>Built enrolment and satisfaction reports; ran competitor and market research</span></li></ul></div></article><article class="iter"><aside><span class="eyebrow">Iteration</span><span class="dates">Oct 2021 – Dec 2022</span></aside><div class="ib"><div><h3>Project Engineer</h3><div class="org">Wipro</div></div><ul class="tasks"><li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3 3 7-7"/></svg><span>Investigated client issues in Oracle and SQL within agreed timelines</span></li><li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3 3 7-7"/></svg><span>Produced daily and monthly performance reports for team leads and clients</span></li></ul></div></article></div>
+    <div class="iters"><article class="iter"><aside><span class="eyebrow">Iteration</span><span class="dates">Jun 2025 – Present</span><span class="cur">Current</span><span class="small muted">Newcastle upon Tyne</span></aside><div class="ib"><div><h3>Business Analyst</h3><div class="org">QWARE</div></div><div class="qw">
+ <h3 style="font-size:17px">Business Analyst behind GS1 UK’s move from barcodes to QR codes</h3>
+ <p class="lede">I owned the analysis for the QR code upgrade to <b>My Numberbank</b>, the platform UK brands use to create the barcodes on products sold in Tesco, Sainsbury’s and every major retailer, from first sign-off to go-live in July 2026.</p>
+ <h4>What GS1 UK gained</h4>
+ <ul><li><b>A live, self-serve QR code generator</b> inside My Numberbank, included in membership, so brands can create QR codes powered by GS1 themselves.</li>
+ <li><b>Its barcode-to-QR roadmap in members’ hands:</b> barcode, then barcode plus QR, then QR only, at each brand’s own pace.</li>
+ <li><b>Far richer product data from a single scan:</b> product information, batch and expiry dates, recipes, marketing and supply-chain details, supporting more precise recalls, less waste and clearer information for shoppers.</li>
+ <li><b>A simple subscription-to-QR journey:</b> subscribe, then a guided side drawer walks the member through generating their QR code.</li></ul>
+ <h4>How I made it happen</h4>
+ <ul><li><b>Owned the backlog end to end:</b> shaped 12+ epics across platform foundation, QR code creation, the shopper landing page, subscriptions and reporting, then T-shirt sized, sequenced and broke them into features, user stories, acceptance criteria and BPMN process maps in Azure DevOps.</li>
+ <li><b>The single voice between GS1’s product owner and the delivery team:</b> every change request and enhancement came through me, and I turned each into an analysed, estimated, sprint-ready story so developers stayed unblocked.</li>
+ <li><b>Challenged designs before they became code:</b> when designs arrived late or as AI-generated mock-ups, I confirmed the intended behaviour with the product owner first, so the team built working features, not decorative screens.</li>
+ <li><b>Kept a steady release rhythm:</b> ran stand-ups and refinement, led retrospectives, and moved work through UAT to production every 2–3 weeks.</li>
+ <li><b>Shaped what comes next:</b> a roadmap of 6+ enhancements, including allergen information, product filtering by use case and member QR promotion.</li></ul>
+ <p><a class="srcl" href="#gs1">Read the full case study ↓</a></p>
+</div></div></article><article class="iter"><aside><span class="eyebrow">Iteration</span><span class="dates">Feb 2023 – Feb 2025</span><span class="small muted">Remote</span></aside><div class="ib"><div><h3>Junior Business Analyst</h3><div class="org">Indian Institute of Hotel Management &amp; Culinary Arts</div></div><ul class="tasks"><li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3 3 7-7"/></svg><span>Analysed admissions and student data to inform admissions and student-services decisions</span></li><li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3 3 7-7"/></svg><span>Built enrolment and satisfaction reports; ran competitor and market research</span></li></ul></div></article><article class="iter"><aside><span class="eyebrow">Iteration</span><span class="dates">Oct 2021 – Dec 2022</span></aside><div class="ib"><div><h3>Project Engineer</h3><div class="org">Wipro</div></div><ul class="tasks"><li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3 3 7-7"/></svg><span>Investigated client issues in Oracle and SQL within agreed timelines</span></li><li><svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3 3 7-7"/></svg><span>Produced daily and monthly performance reports for team leads and clients</span></li></ul></div></article></div>
   </section>
 
   <!-- SKILLS -->
   <section class="sec5" id="skills">
     <div class="sh"><h2><small>BACKLOG</small>Skills</h2><p>Each skill with where I’ve used it.</p></div>
-    <div class="skills5"><div class="sk5"><h3><i></i>Requirements</h3><ul><li>Elicitation: workshops and interviews<span>QWARE, IIHM</span></li><li>User stories with Given/When/Then<span>Case study 1</span></li><li>Traceability and coverage checks<span>Case study 1</span></li><li>Change requests and impact analysis<span>Case studies 1 and 2</span></li></ul></div><div class="sk5"><h3><i></i>Agile delivery</h3><ul><li>Scrum ceremonies<span>QWARE, 2–4 week sprints</span></li><li>Refinement and estimation<span>Case study 3</span></li><li>Epic structuring and dependencies<span>Case study 3</span></li><li>Status reporting for stakeholders<span>Azure DevOps dashboards</span></li></ul></div><div class="sk5"><h3><i></i>Analysis & strategy</h3><ul><li>Process mapping, BPMN 2.0<span>As-is / to-be</span></li><li>MoSCoW prioritisation<span>Case study 3</span></li><li>PESTEL, SWOT, Porter’s Five Forces<span>Snorkel project</span></li><li>Stakeholder management at scale<span>3,000-student programme</span></li></ul></div><div class="sk5"><h3><i></i>Data & tools</h3><ul><li>SQL and Oracle investigation<span>Wipro</span></li><li>Power BI dashboards<span>Call-centre project</span></li><li>Azure DevOps boards and dashboards<span>QWARE</span></li><li>Azure AI Fundamentals<span>AI-900 certified</span></li></ul></div></div>
+    <div class="skills5"><div class="sk5"><h3><i></i>Requirements</h3><ul><li>Elicitation: workshops and interviews<span>QWARE, IIHM</span></li><li>User stories with Given/When/Then<span>Case study 1</span></li><li>Traceability and coverage checks<span>Case study 1</span></li><li>Change requests and impact analysis<span>Case studies 1 and 2</span></li></ul></div><div class="sk5"><h3><i></i>Agile delivery</h3><ul><li>Scrum ceremonies<span>QWARE, 2–4 week sprints</span></li><li>Refinement and estimation<span>GS1 QR codes</span></li><li>Epic structuring and dependencies<span>GS1 QR codes, 12+ epics</span></li><li>Status reporting for stakeholders<span>Azure DevOps dashboards</span></li></ul></div><div class="sk5"><h3><i></i>Analysis & strategy</h3><ul><li>Process mapping, BPMN 2.0<span>As-is / to-be</span></li><li>MoSCoW prioritisation<span>GS1 QR codes</span></li><li>PESTEL, SWOT, Porter’s Five Forces<span>Snorkel project</span></li><li>Stakeholder management at scale<span>3,000-student programme</span></li></ul></div><div class="sk5"><h3><i></i>Data & tools</h3><ul><li>SQL and Oracle investigation<span>Wipro</span></li><li>Power BI dashboards<span>Call-centre project</span></li><li>Azure DevOps boards and dashboards<span>QWARE</span></li><li>Azure AI Fundamentals<span>AI-900 certified</span></li></ul></div></div>
   </section>
 
   <!-- EDUCATION -->
